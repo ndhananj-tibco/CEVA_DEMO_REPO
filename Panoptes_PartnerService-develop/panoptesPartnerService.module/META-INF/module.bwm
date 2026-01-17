@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_d4Gx8IrKEe-4xLADkna3ig" targetNamespace="http://tns.tibco.com/bw/composite/panoptesPartnerService.module" name="panoptesPartnerService.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_eBwdMIrKEe-4xLADkna3ig" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eB94kIrKEe-4xLADkna3ig" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eCBi8IrKEe-4xLADkna3ig" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eCD_MIrKEe-4xLADkna3ig" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eCF0YIrKEe-4xLADkna3ig" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eCHpkIrKEe-4xLADkna3ig" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_eCKs4IrKEe-4xLADkna3ig" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_43NRoMkQEe-sYtY679waNQ" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_43NRockQEe-sYtY679waNQ" processName="panoptesPartnerService.Activator"/>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: POD_PassthroughPlugin Module
+Bundle-SymbolicName: POD_PassthroughPlugin
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: TIBCO Software Inc.
+Require-Bundle: CommonFramework;bundle-version="1.3.1"
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-SharedModule: META-INF/module.bwm
+TIBCO-BW-Version: 2.10.0 HF4 V82 2025-09-11
+Provide-Capability: com.tibco.bw.module; name="POD_PassthroughPlugin"; version:Version="1.0.0",com.tibco.bw.schemas; ns="urn:ceva:eai:bwce:panoptes:pod:plugin:ProcessMessage",com.tibco.bw.processes; name="POD_Passthrough.Mediation"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tibco.bw.module; filter:="(&(name=CommonFramework)(version=1.3.1))",com.tibco.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.palette; filter:="(name=bw.java)",com.tibco.bw.palette; filter:="(name=bw.http)"

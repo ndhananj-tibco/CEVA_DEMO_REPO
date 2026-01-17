@@ -1,0 +1,8 @@
+site_name: "panoptesPartnerService"
+site_description: "panoptesPartnerService"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

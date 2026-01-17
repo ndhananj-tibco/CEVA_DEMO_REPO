@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://xmlns.endesa.com/CommonSchemas" elementFormDefault="qualified" targetNamespace="http://xmlns.endesa.com/CommonSchemas" xmlns:Q1="http://xmlns.tibco.com/psg/CommonSchemas">
+
+
+
+
+
+
+	<element name="Error" type="tns:ErrorType"/>
+	
+	<complexType name="ResultType">
+		<sequence>
+			<element minOccurs="0" name="Status" type="string" />
+			<element minOccurs="0" name="ErrorCode" type="string" />
+			<element minOccurs="0" name="ErrorMessage" type="string" />
+			<element name="ErrorDetails" type="tns:ErrorType" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="ErrorType">
+		<sequence>
+			<element minOccurs="0" name="Severity" type="string"/>
+			<element name="Component" type="string"/>
+			<element name="ErrorCode" type="string"/>
+			<element name="ErrorDate" type="string"/>
+			<element name="ErrorMessage" type="string"/>
+			<element name="StackTrace" type="string"/>
+		</sequence>
+	</complexType>
+
+
+	<!-- T_TI_M_SOAREQUESTS.ID_SOA -->
+	
+    	<simpleType name="SOAId">
+      		<restriction base="string">
+				<maxLength value="36"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.ID_EXTERNAL -->
+    
+		<simpleType name="ExternalId">
+			<restriction base="string">
+				<maxLength value="50" />
+			</restriction>
+		</simpleType>
+    
+	<!-- T_TI_M_SOAREQUESTS.DE_SERVICENAME,T_TI_M_SOATRACES.DE_SERVICENAME -->
+	
+		<simpleType name="ServiceName">
+			<restriction base="string">
+				<maxLength value="50"/>
+			</restriction>
+		</simpleType>
+	
+	
+	<simpleType name="RequestRegisterFlag">
+			<restriction base="boolean">
+			</restriction>
+		</simpleType>
+	<!-- T_TI_M_SOATRACES.DE_SERVICELAYER -->
+	
+		<simpleType name="Layer">
+			<restriction base="string">
+				<maxLength value="50"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DE_SOURCEAPPLICATION -->
+	
+		<simpleType name="SourceApplication">
+			<restriction base="string">
+				<maxLength value="4"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DA_USER_REQ -->
+	
+		<simpleType name="User">
+			<restriction base="string">
+				<maxLength value="20"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DE_CLIENT -->	
+	
+		<simpleType name="Client">
+			<restriction base="string">
+				<maxLength value="50"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DE_IDIOM -->
+	
+		<simpleType name="Language">
+			<restriction base="string">
+				<maxLength value="3"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DA_VERSION_REQ -->
+	
+		<simpleType name="Version">
+			<restriction base="string">
+				<maxLength value="30"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DE_STATE,T_TI_M_SOATRACES.DE_STATE -->
+	
+		<simpleType name="Status">
+			<restriction base="string">
+				<maxLength value="15"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.FH_START,FH_END -->
+	
+	<simpleType name="TimeStamp">
+			<restriction base="dateTime">
+			</restriction>
+		</simpleType>
+		
+	<!-- T_TI_M_SOAMESSAGES.TX_INPUTMESSAGE -->
+  	<element name="Message" type="anyType"/> 
+	
+
+	<!-- T_TI_M_SOAREQUESTS.DA_INFUNCTIONAL -->
+	
+		<simpleType name="InFunctional">
+			<restriction base="string">
+				<maxLength value="50"/>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAREQUESTS.DE_IP -->
+	
+		<simpleType name="IP">
+			<restriction base="string">
+				<maxLength value="15"/>
+			</restriction>
+		</simpleType>
+	
+	
+	
+		<simpleType name="TimeLayer">
+			<restriction base="integer">
+				<maxInclusive value="999999999"/>
+			</restriction>
+		</simpleType>
+	
+		
+	<simpleType name="ArchitectureVersion">
+			<restriction base="string">
+			</restriction>
+		</simpleType>
+		
+		<simpleType name="ServiceType">
+			<restriction base="string">
+			</restriction>
+		</simpleType>
+	
+		<simpleType name="ServiceVersion">
+			<restriction base="string">
+				<maxLength value="4"/>
+			</restriction>
+		</simpleType>
+	
+
+  	<!-- T_TI_M_SOAERRORS.CO_ERROR -->
+  	
+  		<simpleType name="ErrorCode">
+  			<restriction base="string">
+  				<maxLength value="15"></maxLength>
+  			</restriction>
+  		</simpleType>
+  	
+  	<!-- T_TI_M_SOAERRORS.TX_ERRORMESSAGE -->
+  	
+  		<simpleType name="ErrorMessage">
+  			<restriction base="string">
+  				<maxLength value="2000"></maxLength>
+  			</restriction>
+  		</simpleType>
+  	
+	<!-- T_TI_M_SOAERRORS.DE_ERRORTYPE -->  	
+		<element  name="ErrorType">   	
+  		<simpleType>
+  			<restriction base="string">
+  				<maxLength value="25"></maxLength>
+  			</restriction>
+  		</simpleType>
+  	</element>
+	<!-- T_TI_M_SOAERRORS.DE_SEVERITY -->
+	
+		<simpleType name="Severity">
+			<restriction base="string">
+				<maxLength value="7"></maxLength>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAERRORS.DE_CORRECTION -->
+	
+		<simpleType name="Correction">
+			<restriction base="string">
+				<maxLength value="2000"></maxLength>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAERRORS.DE_MODULE -->
+	
+		<simpleType name="Module">
+			<restriction base="string">
+				<maxLength value="50"></maxLength>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAERRORS.DE_TASK -->
+	
+		<simpleType name="Task">
+			<restriction base="string">
+				<maxLength value="50"></maxLength>
+			</restriction>
+		</simpleType>
+	
+	<!-- T_TI_M_SOAERRORS.DE_PROCESS -->
+	
+		<simpleType name="Process">
+			<restriction base="string">
+				<maxLength value="50"></maxLength>
+			</restriction>
+		</simpleType>
+	
+		
+	<simpleType name="ErrorDate">
+			<restriction base="dateTime">
+			</restriction>
+		</simpleType>
+	
+		<simpleType name="StackTrace">
+			<restriction base="string">
+				<maxLength value="4000"></maxLength>
+			</restriction>
+		</simpleType>
+	
+	
+  	
+   		<simpleType name="CodigoError">
+    		<restriction base="string">
+        		<maxLength value="15"/>
+      		</restriction>
+    	</simpleType>
+  	
+  	
+  		<element name="SOAParameters" type="tns:SOAParametersType"></element>
+	
+	<complexType name="SOAParametersType">
+		<sequence>
+			<element name="SOAHeader" type="tns:SOAHeaderType" minOccurs="1"></element>
+			<element name="SOAFunctionalInfo" type="anyType" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+  	
+    	<simpleType name="MensajeError">
+      		<restriction base="string">
+        		<maxLength value="2000"/>
+      		</restriction>
+    	</simpleType>
+  	
+  	
+    	<simpleType name="TipoError">
+    		<restriction base="string">
+    			<maxLength value="25" />
+    		</restriction>
+    	</simpleType>
+  	
+  	
+    	<simpleType name="FechaHora">
+      		<restriction base="dateTime">
+        		<pattern value="dd-mm-YYYY HH:mm:ss"/>
+      		</restriction>
+    	</simpleType>
+  	
+  	
+    	<simpleType name="Programa">
+      		<restriction base="string">
+        		<maxLength value="50"/>
+      		</restriction>
+    	</simpleType>
+  	
+  	
+    	<simpleType name="Funcion">
+      		<restriction base="string">
+        		<maxLength value="20"/>
+      		</restriction>
+    	</simpleType>
+  	
+  	
+    	<simpleType name="Traza">
+      		<restriction base="string">
+        		<maxLength value="4000"/>
+      		</restriction>
+    	</simpleType>
+  	
+
+
+	<complexType name="AuditType">
+		<sequence>
+                  <element name="SOAId" type="tns:SOAId"/>
+                  <element name="SourceApplication" type="tns:SourceApplication"></element>
+                  <element name="ServiceName" type="tns:ServiceName"></element>
+                  <element name="ExternalId" type="tns:ExternalId" minOccurs="0"></element>
+                  <element name="IP" type="tns:IP" minOccurs="0"></element>
+                  <element name="Client" type="tns:Client" minOccurs="0"></element>
+                  <element name="User" type="tns:User" minOccurs="0"></element>
+                  <element name="Language" type="tns:Language" minOccurs="0"></element>
+                  <element name="Version" type="tns:Version" minOccurs="0"></element>
+                  <element name="ArchitectureVersion" type="tns:ArchitectureVersion" minOccurs="0"></element>                 
+                  <element name="RequestRegisterFlag" type="tns:RequestRegisterFlag" minOccurs="0"> </element>
+                  <element name="Layer" type="tns:Layer"></element>
+                  <element name="Status" type="tns:Status"></element>
+                  <element name="TimeStamp" type="tns:TimeStamp"></element>
+                  <element ref="tns:Message" minOccurs="0"></element>
+                  <element name="InFunctional" type="tns:InFunctional" minOccurs="0"></element>
+                  <element name="TimeLayer" type="tns:TimeLayer" minOccurs="0"></element>
+                  <element ref="tns:Error" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<element name="SOAHeader" type="tns:SOAHeaderType"/>
+
+	<complexType name="SOAHeaderType">
+		<sequence>
+			<element minOccurs="0" name="SOAId" type="string"/>
+			<element name="SourceApplication" type="string"/>
+			<!-- Deprecado! Se mantiene por compatibilidad no se va a hacer uso de 
+				ellos -->
+			<element name="ServiceName" type="string"/>
+			<element name="ExternalId" type="string"/>
+			<!-- Deprecado! Se mantiene por compatibilidad no se va a hacer uso de 
+				ellos -->
+			<element name="IP" type="string"/>
+			<element name="Client" type="string"/>
+			<element minOccurs="0" name="User" type="string"/>
+			<!-- Deprecado! Se mantiene por compatibilidad no se va a hacer uso de 
+				ellos -->
+			<element name="Language" type="string"/>
+			<!-- Deprecado! Se mantiene por compatibilidad no se va a hacer uso de 
+				ellos -->
+			<element name="Version" type="string"/>
+			<!-- Deprecado! Se mantiene por compatibilidad no se va a hacer uso de 
+				ellos -->
+			<element minOccurs="0" name="ArchitectureVersion" type="string"/>
+			<element minOccurs="0" name="FunctionalGroup" type="string"/>
+		</sequence>
+	</complexType>
+
+
+
+
+
+
+
+
+
+
+	<element name="SOAHeaderResponse" type="tns:SOAHeaderResponseType"/>
+
+	<element name="Result" type="string"/>
+
+
+	<complexType name="SOAHeaderResponseType">
+		<sequence>
+			<element minOccurs="0" name="SOAId" type="string"/>
+			<element minOccurs="0" name="Result" type="tns:ResultType"/>
+		</sequence>
+	</complexType>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<element name="Element">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="groupName" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="itemName" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="itemValue" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	
+
+
+
+  
+  
+  
+  
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+
+    
+</schema>

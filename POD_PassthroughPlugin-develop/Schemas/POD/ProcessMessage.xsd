@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema targetNamespace="urn:ceva:eai:bwce:panoptes:pod:plugin:ProcessMessage" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:ceva:eai:bwce:panoptes:pod:plugin:ProcessMessage" xmlns:pref="urn:ceva:eai:bwce:panoptes:pod:plugin">
+	<xsd:element name="Input">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="DocumentID" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

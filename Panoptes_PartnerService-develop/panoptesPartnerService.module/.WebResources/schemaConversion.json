@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/panoptesPartnerService.module/Service Descriptors/com.tibco.bw.service.panoptesPartnerService.public.rest-rest.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/schema/1508569656776"
+    },
+    {
+        "jsonSchemaLocation": "/panoptesPartnerService.module/Service Descriptors/com.tibco.bw.service.panoptesPartnerService.internal.admin.Resource-Resource.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://xmlns.tibco.com/psg/CommonSchemas"
+    }
+]}

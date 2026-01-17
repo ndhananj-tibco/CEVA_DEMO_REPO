@@ -1,0 +1,2 @@
+@Library('eai-pipeline-library@master') _
+workflow('package','SharedModule')

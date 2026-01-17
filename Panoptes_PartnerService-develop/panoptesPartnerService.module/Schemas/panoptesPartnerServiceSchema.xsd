@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1508569656776" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1508569656776" xmlns:Q1="http://xmlns.endesa.com/CommonSchemas">
+    <import namespace="http://xmlns.endesa.com/CommonSchemas" schemaLocation="EnelSchemas.xsd"></import>
+    <element name="operationRequest">
+    <complexType>
+      <sequence>
+
+      	<element name="SOAHeader" type="Q1:SOAHeaderType"></element>
+      	<element name="SOAFunctionalInfo" type="tns:panoptesPartnerService"></element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="operationResponse">
+    <complexType>
+      <sequence>
+      	<element name="SOAHeaderResponse"
+      		type="Q1:SOAHeaderResponseType" />
+      	<element name="SOAFunctionalInfo"
+      		type="tns:panoptesPartnerService_Output">
+      	</element>
+      </sequence>
+    </complexType>
+  </element>
+
+  <complexType name="panoptesPartnerService">
+  	<sequence>
+  		<element name="in" type="string"></element>
+  	</sequence>
+  </complexType>
+
+  <complexType name="panoptesPartnerService_Output">
+  	<sequence>
+  		<element name="out" type="string"></element>
+  	</sequence>
+  </complexType>
+</schema>

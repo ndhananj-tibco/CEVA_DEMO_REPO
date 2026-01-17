@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_FBxEkMyMEfCm1pVRSJHI5w" targetNamespace="http://tns.tibco.com/bw/composite/POD_PassthroughPlugin" name="POD_PassthroughPlugin" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_FIk3MMyMEfCm1pVRSJHI5w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIv2UMyMEfCm1pVRSJHI5w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIxrgMyMEfCm1pVRSJHI5w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FI0HwMyMEfCm1pVRSJHI5w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FI3LEMyMEfCm1pVRSJHI5w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FI5AQMyMEfCm1pVRSJHI5w" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_FI6OYMyMEfCm1pVRSJHI5w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rrRx4MyVEfC0nNhAJowT4A" name="/POD_PassthroughPlugin/Config/receiveContextPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_xsqFgMyVEfC0nNhAJowT4A" name="/POD_PassthroughPlugin/Config/receivePathSpec" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_aMPeEM7YEfCwR5zfXwyEFQ" name="/POD_PassthroughPlugin/Config/httpPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-zSY0M7rEfCOOM7iWrGtAQ" name="/POD_PassthroughPlugin/EMB/kafkaTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_3RJroM7AEfC93p3nCXdmgg" name="ComponentReceiverPOD" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_3RJroc7AEfC93p3nCXdmgg" processName="POD_Passthrough.Mediation.ReceiverPOD"/>
+  </sca:component>
+</sca:composite>

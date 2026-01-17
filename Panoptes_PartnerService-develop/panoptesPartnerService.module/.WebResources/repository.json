@@ -1,0 +1,25 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/com.tibco.bw.service.panoptesPartnerService.public.rest-rest.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.tibco.bw.service.panoptesPartnerService.internal.admin.Resource-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.tibco.bw.service.panoptesPartnerService.internal.admin.rest-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.tibco.bw.service.panoptesPartnerService.public.rest-rest.json",
+            "type": "generated"
+        }
+    ]
+}

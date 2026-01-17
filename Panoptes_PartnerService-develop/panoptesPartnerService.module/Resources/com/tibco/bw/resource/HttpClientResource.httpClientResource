@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_FZ17YDp_Eei3V4wAOyxeDw" name="com.tibco.bw.resource.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_FaHoMDp_Eei3V4wAOyxeDw" httpClientVersion="commons" retryCount="3" idleConnectionTimeout="3000">
+    <tcpDetails xmi:id="_FaOV4Dp_Eei3V4wAOyxeDw"/>
+  </jndi:configuration>
+</jndi:namedResource>
